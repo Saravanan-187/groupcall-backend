@@ -3,7 +3,6 @@ const Group = require("../models/Group");
 
 const router = express.Router();
 
-// Get all groups
 router.get("/", async (req, res) => {
   try {
     const groups = await Group.find();
@@ -13,7 +12,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Create a new group
 router.post("/", async (req, res) => {
   const { name, members } = req.body;
 
